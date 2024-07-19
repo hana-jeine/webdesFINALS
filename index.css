@@ -1,0 +1,348 @@
+/*brand font*/
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.cdnfonts.com/css/meldina');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Style+Script&display=swap');
+/*paragraph font*/
+@import url('https://fonts.cdnfonts.com/css/avenir');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/*LOGO-BRAND*/
+.container-fluid{
+    display: flex;
+    padding: 0;
+    width: 100%;
+    height: 75px;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+#logo img{
+    width: 50px;
+    height: 50px;
+}
+.brand{
+    margin-left: 5px;
+    font-family: 'Style Script', cursive;
+    font-size: 30px;
+}
+
+/*NAVBAR*/
+.navbar{
+    padding: 0;
+    font-family: "Libre Baskerville", serif;
+    font-size: 15px;
+}
+.navbar .container-fluid{
+    padding-right: 50px;
+    padding-left: 20px;
+}
+.navbar .navbar-collapse{
+    padding: 15px;
+    background-color: #ffffff;
+}
+.nav-item{
+    padding-right: 50px;
+}
+.dropdown-menu{
+    font-family: 'Avenir', sans-serif;
+    font-size: small;
+    margin-bottom: 10px;
+}
+.offcanvas-header .brand{
+    margin: 0;
+}
+.offcanvas-body{
+    padding: 0 0 0 20px;
+}
+.navbar-toggler{
+    border: none;
+    font-size: 1.5rem;
+}
+.navbar-toggler:focus, .btn-close:focus{
+    box-shadow: none;
+    outline: none;
+}
+.nav-link{
+    color: #667773;
+    font-weight: 500;
+    position: relative;
+}
+.nav-link:hover, .nav-link.active:hover{
+    color: black;
+}
+
+@media(min-width: 991px){    
+.nav-link::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+}
+.nav-link:hover::before, .nav-link.active::before{
+    width: 100%;
+    visibility: visible;
+}
+}
+.d-flex .form-control{
+    width: 200px;
+    border-radius: 0;
+    font-size: small;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    border-bottom-color: #FCE230;
+    background-color: transparent;
+}
+.form-control:focus{
+    box-shadow: none;
+    outline: none;
+}
+.d-flex .btn{
+    border-radius: 0;
+    border: none;
+    color: white;
+    background-color: #FCE230;
+}
+@media(max-width: 960px){
+    .navbar .container-fluid{
+        padding-right: 20px;
+        padding-left: 10px;
+    }
+    .d-flex .form-control{
+        width: 200px;
+    }
+}
+@media(max-width: 350px){
+    .navbar .container-fluid{
+        padding-right: 10px;
+        padding-left: 5px;
+    }
+    .d-flex .form-control{
+        width: 150px;
+    }
+}
+
+/*HOME SECTION*/
+.home-section .container-fluid{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    background: url(bg-img.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Avenir', sans-serif;
+}
+.ccc{
+    color: #ffff;
+    letter-spacing: 5px;
+    margin-bottom: 1vh;
+    text-align: center;
+}
+.home-section .btn{
+    border-radius: 0;
+    padding: 10px 35px;
+    font-size: larger;
+}
+.home-section .btn:hover{
+    background-color: #20B3AD;
+    border: none;
+    color: white;
+}
+@media(max-width: 350px) {
+    .ccc{
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+}
+
+/*ART ALLEY*/
+.art-alley .container-fluid{
+    position: relative;
+    background-color: #FCE230;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.art-alley-header{
+    margin-top: 3vh;
+    font-size: 3em;
+    font-style: italic;
+    text-align: center;
+    font-family: 'Meldina', sans-serif;
+}
+.art-alley-p{
+    font-family: 'Libre Baskerville', serif;
+    font-size: medium;
+    text-align: center;
+    padding: 20px 10em;
+}
+.art-alley .btn{
+    margin-top: 10px;
+    font-family: 'Avenir', sans-serif;
+    background-color: #20B3AD;
+    border: none;
+    border-radius: 0;
+    padding: 10px 35px;
+    font-size: larger;
+    color: #FFFFFF;
+}
+.art-alley .btn:hover{
+    background-color: #FFFFFF;
+    border: none;
+    color: black;
+}
+@media(max-width: 500px) {
+    .art-alley-p{
+        padding: 20px 5em;
+    }
+}
+/*CATEGORIES*/
+#container-fluid .home-category{
+    width: 100%;
+    min-height: 500px;
+    text-align: center;
+    font-family: "Libre Baskerville", serif;
+    font-style: italic;
+    font-size: medium;
+    color: #FFFFFF;
+}
+.category{
+    align-content: center;
+    font-size: 1.5em;
+    transition: all 0.2s ease-in-out;
+}
+.category:hover{
+    letter-spacing: 0.2em;
+    cursor: pointer;
+}
+.home-category .category:nth-child(1){
+    background-image: url(DIGITAL/ever-2.jpg);
+    min-height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.home-category .category:nth-child(2){
+    background-image: url(TRAD/rom-1-amahandthepomegranateplant.jpg);
+    min-height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.home-category .category:nth-child(3){
+    background-image: url(CRAFTS/ndm-2.jpg);
+    min-height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*FOOTER*/
+.footer .clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.programmer{
+    color: #062221;
+    white-space: pre;
+}
+#container-fluid{
+    width: 100%;
+    min-height: 350px;   
+}
+#container-fluid .footer-col{
+    width: 20%;
+    min-height: 350px;
+    background-color: #ffffff;
+    padding: 30px;
+    float: left;
+    align-content: center;
+    text-align: center;
+    font-family: "Libre Baskerville", serif;
+    font-size: medium;
+    color: #062221;
+    font-size: 15px;
+}
+#container-fluid .footer-col:nth-child(1){
+    align-content: normal;
+    padding-top: 5em;
+    width: 15%;
+    color: #20B3AD;
+}
+#container-fluid .footer-col:nth-child(5){
+    text-align: left;
+    width: 25%;
+}
+.footer-sub{
+    margin-bottom: 10px;
+}
+.mb-3 .form-control{
+    padding-left: 0;
+    font-size: small;
+    width: 90%;
+    border-radius: 0;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    border-bottom-color: #FCE230;
+    background-color: transparent;
+}
+.sub-now .btn{
+    margin-top: 10px;
+    border-radius: 0;
+    padding: 5px 15px;
+    font-size: smaller;
+    border-color: #20B3AD;
+    color: #20B3AD;
+}
+.sub-now .btn:hover{
+    background-color: #20B3AD;
+    border: none;
+    color: white;
+}
+
+@media(max-width: 960px){
+    #container-fluid{
+        width: 100%;
+        min-height: 25px;   
+    }
+    #container-fluid .footer-col{
+        width: 100%;
+        min-height: 25px;
+        background-color: #ffffff;
+        padding: 30px;
+        align-content: center;
+        text-align: center;
+        font-family: "Libre Baskerville", serif;
+        font-size: medium;
+        color: #062221;
+        font-size: 15px;
+    }
+    #container-fluid .footer-col:nth-child(1){
+        align-content: normal;
+        padding-top: 5em;
+        width: 100%;
+        color: #20B3AD;
+    }
+    #container-fluid .footer-col:nth-child(5){
+        padding: 25px 25% 20% 25%;
+        text-align: left;
+        width: 100%;
+    }
+}
